@@ -1,4 +1,5 @@
 package Usuario;
+import Estructuras.Listas.ListaSimple;
 
 public class Usuario {
     private String nombreDeUsuario;
@@ -8,5 +9,13 @@ public class Usuario {
 
     //generos favoritos
     //amigos
+    ListaSimple listaUsuario = new ListaSimple(ListaSimple(String));
+
+
+    public void incializarLista(ListaSimple listaUsuario){
+     for(int i =0; i<= 4; i++){
+         ListaSimple.add(new ListaSimple(String));
+
+    }}
 
 }
