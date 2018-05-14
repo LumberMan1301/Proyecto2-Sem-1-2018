@@ -1,6 +1,6 @@
 package Estructuras.Ordenamiento;
 
-import org.tec.datastructures.ListaSimple;
+import Estructuras.Listas.ListaSimple;
 
 public class RadixSort
 {

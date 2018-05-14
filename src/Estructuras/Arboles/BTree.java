@@ -1,9 +1,5 @@
 package Estructuras.Arboles;
 
-import org.tec.datastructures.BTree;
-import org.tec.datastructures.BTree.Entry;
-import org.tec.datastructures.BTree.Node;
-
 public class BTree<Key extends Comparable<Key>, Value>
 {
   public static final int M = 4;
