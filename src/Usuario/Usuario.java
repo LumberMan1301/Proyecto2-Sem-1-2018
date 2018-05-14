@@ -41,10 +41,16 @@ public class Usuario {
         for (int i = 0; i <= l.get(0).size() - 1; i++) {
             System.out.println("Nombre: " + l.get(0).get(i) + " Nombre Completo: "
                     + l.get(1).get(i) + " " + l.get(2).get(i)
-                    + " Contrase;a: " + l.get(3).get(i)
-            );
+                    + " Contrase;a: " + l.get(3).get(i));
         }
 
     }
+
+    /**
+     *
+     */
+    //static String toHexadecimal(String source){
+    //return toHexadecimal(source.getBytes());
+    //}
 
 }
