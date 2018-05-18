@@ -1,6 +1,6 @@
 package Estructuras.Arboles;
 
-import org.tec.datastructures.AVLNode;
+import Estructuras.Arboles.AVLNode;
 
 public class AVLNode<T extends Comparable<T>>
 {
