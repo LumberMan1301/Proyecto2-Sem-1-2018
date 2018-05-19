@@ -10,17 +10,17 @@ public class RadixSort
   {
     if (lista.size() > 0) {
       if (lista.getHead().getData().getClass().getName().equals("java.lang.Integer")) {
-        ListaSimple<Integer> list = lista;
+        ListaSimple<Integer> list = (ListaSimple<Integer>) lista;
         list.setHead(RadixSortAuxiliarInteger(list, largerNumberSize(list), 1));
       }
       else if (lista.getHead().getData().getClass().getName().equals("java.lang.String")) {
-        ListaSimple<String> list = lista;
+        ListaSimple<String> list = (ListaSimple<String>) lista;
         fixString(list);
         list.setHead(RadixSortAuxiliarString(list, ((String)list.getHead().getData()).length(), 1));
       }
       else {
         ListaSimple<String> stringList = stringList(lista);
-        ListaSimple<Comparable> comparableList = lista;
+        ListaSimple<Comparable> comparableList = (ListaSimple<Comparable>) lista;
         fixString(stringList);
         comparableList.setHead(RadixSortAuxiliarComparable(stringList, comparableList, ((String)stringList.getHead().getData()).length(), 1));
       }
@@ -31,7 +31,7 @@ public class RadixSort
   {
     sort(lista);
     if (descendant) {
-      ListaSimple<Comparable> comparableList = lista;
+      ListaSimple<Comparable> comparableList = (ListaSimple<Comparable>) lista;
       ListaSimple<Comparable> emptyComparableList = new ListaSimple();
       for (int i = comparableList.size() - 1; i >= 0; i--) {
         emptyComparableList.add((Comparable)comparableList.get(i));
@@ -40,10 +40,10 @@ public class RadixSort
     }
   }
   
-  private static org.tec.datastructures.NodeLista<String> RadixSortAuxiliarString(ListaSimple<String> list, int larger, int mod)
+  private static Estructuras.Listas.NodeLista<String> RadixSortAuxiliarString(ListaSimple<String> list, int larger, int mod)
   {
     if (mod <= larger) {
-      int[] counter = new int['Ĭ'];
+      int[] counter = new int['A'];
       countString(counter, list, mod);
       fixCount(counter);
       ListaSimple<String> emptyList = newEmptyList(" ", list.size());
@@ -65,10 +65,10 @@ public class RadixSort
   }
   
 
-  private static org.tec.datastructures.NodeLista<Comparable> RadixSortAuxiliarComparable(ListaSimple<String> stringList, ListaSimple<Comparable> comparableList, int larger, int mod)
+  private static Estructuras.Listas.NodeLista<Comparable> RadixSortAuxiliarComparable(ListaSimple<String> stringList, ListaSimple<Comparable> comparableList, int larger, int mod)
   {
     if (mod <= larger) {
-      int[] counter = new int['Ĭ'];
+      int[] counter = new int['A'];
       countString(counter, stringList, mod);
       fixCount(counter);
       ListaSimple<String> emptyStringList = newEmptyList(" ", stringList.size());
@@ -94,7 +94,7 @@ public class RadixSort
   
 
 
-  private static org.tec.datastructures.NodeLista<Integer> RadixSortAuxiliarInteger(ListaSimple<Integer> list, int larger, int mod)
+  private static Estructuras.Listas.NodeLista<Integer> RadixSortAuxiliarInteger(ListaSimple<Integer> list, int larger, int mod)
   {
     if (mod <= larger) {
       int[] counter = new int[10];

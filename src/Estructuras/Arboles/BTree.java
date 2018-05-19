@@ -6,12 +6,19 @@ public class BTree<Key extends Comparable<Key>, Value>
   public Node root;
   public int height;
   public int n;
+<<<<<<< HEAD
 
   private static final class Node
   {
     public int m;
     public BTree.Entry[] children = new BTree.Entry[4];
 
+=======
+  
+  private static final class Node{
+    public int m;
+    public BTree.Entry[] children = new BTree.Entry[4];
+>>>>>>> 39045b59da63fcad88d0438a0ebb67986d8c1114
     public Node(int k) { m = k; }
   }
 
@@ -60,7 +67,8 @@ public class BTree<Key extends Comparable<Key>, Value>
 
     if (ht == 0) {
       for (int j = 0; j < m; j++) {
-        if (eq(key, key)) { return val;
+        if (eq(key, key)) { 
+        	return val;
         }
 
       }

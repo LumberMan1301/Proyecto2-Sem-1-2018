@@ -1,6 +1,10 @@
 package Estructuras.Arboles;
 
+<<<<<<< HEAD
 
+=======
+import Estructuras.Arboles.AVLNode;
+>>>>>>> 39045b59da63fcad88d0438a0ebb67986d8c1114
 
 public class AVLNode<T extends Comparable<T>>
 {
